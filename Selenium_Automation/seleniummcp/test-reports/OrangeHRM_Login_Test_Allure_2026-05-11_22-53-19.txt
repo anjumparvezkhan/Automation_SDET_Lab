@@ -1,0 +1,45 @@
+=================================================
+TEST REPORT: OrangeHRM_Login_Test_Allure
+=================================================
+Generated: 2026-05-11 22:53:19
+Duration: 25 seconds
+-------------------------------------------------
+SUMMARY
+-------------------------------------------------
+Total Steps: 10
+Passed: 3
+Failed: 1
+-------------------------------------------------
+TEST STEPS
+-------------------------------------------------
+[INFO] Setup
+  Description: Browser initialized and maximized
+  Time: 2026-05-11 22:52:55
+[INFO] Step 1
+  Description: Navigating to OrangeHRM login page
+  Time: 2026-05-11 22:52:55
+[INFO] Step 2
+  Description: Entering username: Admin
+  Time: 2026-05-11 22:53:00
+[PASS] Username Entry
+  Description: Username entered successfully
+  Time: 2026-05-11 22:53:01
+[INFO] Step 3
+  Description: Entering password
+  Time: 2026-05-11 22:53:01
+[PASS] Password Entry
+  Description: Password entered successfully
+  Time: 2026-05-11 22:53:01
+[INFO] Step 4
+  Description: Clicking login button
+  Time: 2026-05-11 22:53:01
+[PASS] Login Button Click
+  Description: Login button clicked successfully
+  Time: 2026-05-11 22:53:02
+[INFO] Step 5
+  Description: Verifying dashboard is displayed
+  Time: 2026-05-11 22:53:02
+[FAIL] Login Verification
+  Description: Login verification failed: Dashboard should be displayed after successful login ==> expected: <true> but was: <false>
+  Time: 2026-05-11 22:53:19
+=================================================

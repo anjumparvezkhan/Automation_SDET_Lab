@@ -1,0 +1,6 @@
+com\MCP_Automation\base\BasePage.class
+com\MCP_Automation\pages\LoginPage.class
+com\MCP_Automation\reporting\TestReport$TestLog.class
+com\MCP_Automation\reporting\TestReport.class
+com\MCP_Automation\Login.class
+com\MCP_Automation\listeners\TestListener.class
