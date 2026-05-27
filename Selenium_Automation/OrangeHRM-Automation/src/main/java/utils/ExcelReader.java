@@ -19,11 +19,19 @@ public class ExcelReader {
 	public ExcelReader(String filePath, String sheetName) throws Exception {
 		try {
 			File file = new File(filePath);
+			if (!file.exists()) {
+				throw new Exception("Excel file not found at: " + filePath);
+			}
 			FileInputStream inputStream = new FileInputStream(file);
 			workbook = new XSSFWorkbook(inputStream);
 			sheet = workbook.getSheet(sheetName);
+			if (sheet == null) {
+				throw new Exception("Sheet '" + sheetName + "' not found in Excel file");
+			}
 		} catch (Exception e) {
-			System.out.println(e);
+			System.err.println("Error initializing ExcelReader: " + e.getMessage());
+			e.printStackTrace();
+			throw e;
 		}
 	}
 
@@ -64,6 +72,13 @@ public class ExcelReader {
 	
 	public List<String[]> logingetAllRows() {
 	    List<String[]> rows = new ArrayList<>();
+	    
+	    if (sheet == null) {
+	    	throw new RuntimeException("Sheet is not initialized. Check your Excel file and sheet name.");
+	    }
+
+		String sheetName = sheet.getSheetName();
+		System.out.println("Reading data from sheet: " + sheetName);
 
 	    for (Row row : sheet) {
 	        if (row.getRowNum() == 0) continue; // skip header row

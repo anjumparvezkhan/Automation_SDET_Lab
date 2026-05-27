@@ -1,7 +1,10 @@
 base\BaseTest.class
 driver\DriverFactory.class
+CheckSheets.class
 utils\ExcelReader.class
+base\TestListener.class
 pages\LoginPage.class
+pages\SidePanelPageObject.class
 pages\DashboardPage.class
 utils\ConfigReader.class
 utils\ExtentManager.class

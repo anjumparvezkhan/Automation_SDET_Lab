@@ -1,7 +1,10 @@
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\base\BaseTest.java
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\driver\DriverFactory.java
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\pages\DashboardPage.java
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\pages\LoginPage.java
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\utils\ConfigReader.java
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\utils\ExcelReader.java
-C:\MyWorkspace\Selenium\OrangeHRM-Automation\src\main\java\utils\ExtentManager.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\utils\ExcelReader.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\pages\DashboardPage.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\utils\ExtentManager.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\driver\DriverFactory.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\pages\LoginPage.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\CheckSheets.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\utils\ConfigReader.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\base\BaseTest.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\base\TestListener.java
+D:\Automation-SDET---Lab\Selenium_Automation\OrangeHRM-Automation\src\main\java\pages\SidePanelPageObject.java
