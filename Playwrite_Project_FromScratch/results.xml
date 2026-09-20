@@ -1,0 +1,12 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="12.696654999999998">
+<testsuite name="example.spec.ts" timestamp="2026-09-20T12:28:42.934Z" hostname="chromium" tests="2" failures="0" skipped="0" time="20.134" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="11.316">
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="8.818">
+</testcase>
+</testsuite>
+<testsuite name="smoke\home.spec.ts" timestamp="2026-09-20T12:28:42.934Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.175" errors="0">
+<testcase name="Home page should have the correct title" classname="smoke\home.spec.ts" time="7.175">
+</testcase>
+</testsuite>
+</testsuites>
