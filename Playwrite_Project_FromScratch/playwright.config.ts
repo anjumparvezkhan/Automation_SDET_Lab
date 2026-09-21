@@ -46,16 +46,15 @@ export default defineConfig({
   
     //stable locators stratergy
     testIdAttribute: 'data-test-id',
+  },
 
     /* Test timeout */
-    timeout: 30000,
+    timeout: 60000,
 
     /*Expect assertion timeout*/
     expect: {
       timeout: 5000
-    }
-
-  },
+    },
 
   /* Configure projects for major browsers */
   projects: [
