@@ -32,6 +32,9 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: process.env.BASE_URL || 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
 
+    //Browser Run Mode
+    headless: false,
+    
     /*Capture a screenshot when test fails. See https://playwright.dev/docs/screenshots */
     screenshot: 'only-on-failure',
 

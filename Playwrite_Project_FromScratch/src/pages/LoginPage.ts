@@ -39,5 +39,4 @@ export class LoginPage {
   async verifyErrorMessage() {
     await expect(this.errorMessage).toBeVisible({ timeout: 5000 });
   }
-
 }

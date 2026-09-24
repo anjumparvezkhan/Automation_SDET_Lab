@@ -1,64 +1,8 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="80.056004">
-<testsuite name="smoke\home.spec.ts" timestamp="2026-09-21T11:34:03.194Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.661" errors="0">
-<testcase name="Home page should have the correct title" classname="smoke\home.spec.ts" time="7.661">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="13.34921000000002">
+<testsuite name="smoke\dashboard.spec.ts" timestamp="2026-09-24T04:22:02.431Z" hostname="chromium" tests="2" failures="0" skipped="0" time="21.311" errors="0">
+<testcase name="Dashboard Tests › Verify Dashboard Sidebar is visible" classname="smoke\dashboard.spec.ts" time="9.636">
 </testcase>
-</testsuite>
-<testsuite name="smoke\login.spec.ts" timestamp="2026-09-21T11:34:03.194Z" hostname="chromium" tests="2" failures="0" skipped="0" time="102.29" errors="1">
-<testcase name="Login Tests › basic login test" classname="smoke\login.spec.ts" time="77.069">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\smoke-login-Login-Tests-basic-login-test-chromium\video.webm]]
-
-[[ATTACHMENT|test-results\smoke-login-Login-Tests-basic-login-test-chromium\error-context.md]]
-
-[[ATTACHMENT|test-results\smoke-login-Login-Tests-basic-login-test-chromium\trace.zip]]
-]]>
-</system-out>
-<error message="Test timeout of 60000ms exceeded while running &quot;beforeEach&quot; hook." type="Error">
-<![CDATA[  [chromium] › smoke\login.spec.ts:13:3 › Login Tests › basic login test ───────────────────────────
-
-    Test timeout of 60000ms exceeded while running "beforeEach" hook.
-
-       5 |   let loginPage: LoginPage;
-       6 |
-    >  7 |   test.beforeEach('Home page should have the correct title', async ({ page }) => {
-         |        ^
-       8 |     await page.goto('/',  { waitUntil: 'domcontentloaded' });
-       9 |     const title = await page.title();
-      10 |     expect(title).toBe('OrangeHRM');
-        at D:\Automation-SDET---Lab\Playwrite_Project_FromScratch\tests\smoke\login.spec.ts:7:8
-
-    Error: page.goto: Test timeout of 60000ms exceeded.
-    Call log:
-      - navigating to "https://opensource-demo.orangehrmlive.com/", waiting until "domcontentloaded"
-
-
-       6 |
-       7 |   test.beforeEach('Home page should have the correct title', async ({ page }) => {
-    >  8 |     await page.goto('/',  { waitUntil: 'domcontentloaded' });
-         |                ^
-       9 |     const title = await page.title();
-      10 |     expect(title).toBe('OrangeHRM');
-      11 |   });
-        at D:\Automation-SDET---Lab\Playwrite_Project_FromScratch\tests\smoke\login.spec.ts:8:16
-
-    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\smoke-login-Login-Tests-basic-login-test-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\smoke-login-Login-Tests-basic-login-test-chromium\error-context.md
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\smoke-login-Login-Tests-basic-login-test-chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace ..\test-results\smoke-login-Login-Tests-basic-login-test-chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</error>
-</testcase>
-<testcase name="Login Tests › login with invalid credentials" classname="smoke\login.spec.ts" time="25.221">
+<testcase name="Dashboard Tests › Navigate to My Info" classname="smoke\dashboard.spec.ts" time="11.675">
 </testcase>
 </testsuite>
 </testsuites>
