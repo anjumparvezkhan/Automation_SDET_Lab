@@ -1,8 +1,18 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="13.34921000000002">
-<testsuite name="smoke\dashboard.spec.ts" timestamp="2026-09-24T04:22:02.431Z" hostname="chromium" tests="2" failures="0" skipped="0" time="21.311" errors="0">
-<testcase name="Dashboard Tests › Verify Dashboard Sidebar is visible" classname="smoke\dashboard.spec.ts" time="9.636">
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="48.000602">
+<testsuite name="smoke\dashboard.spec.ts" timestamp="2026-09-24T16:22:26.933Z" hostname="chromium" tests="2" failures="0" skipped="0" time="82.531" errors="0">
+<testcase name="Dashboard Tests › Verify Dashboard Sidebar is visible" classname="smoke\dashboard.spec.ts" time="39.663">
 </testcase>
-<testcase name="Dashboard Tests › Navigate to My Info" classname="smoke\dashboard.spec.ts" time="11.675">
+<testcase name="Dashboard Tests › Navigate to My Info" classname="smoke\dashboard.spec.ts" time="42.868">
+</testcase>
+</testsuite>
+<testsuite name="smoke\home.spec.ts" timestamp="2026-09-24T16:22:26.933Z" hostname="chromium" tests="1" failures="0" skipped="0" time="40.433" errors="0">
+<testcase name="Home page should have the correct title" classname="smoke\home.spec.ts" time="40.433">
+</testcase>
+</testsuite>
+<testsuite name="smoke\login.spec.ts" timestamp="2026-09-24T16:22:26.933Z" hostname="chromium" tests="2" failures="0" skipped="0" time="91.075" errors="0">
+<testcase name="Login Tests › basic login test" classname="smoke\login.spec.ts" time="45.156">
+</testcase>
+<testcase name="Login Tests › login with invalid credentials" classname="smoke\login.spec.ts" time="45.919">
 </testcase>
 </testsuite>
 </testsuites>

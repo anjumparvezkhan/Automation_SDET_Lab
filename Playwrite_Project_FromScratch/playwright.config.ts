@@ -22,19 +22,16 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['list'],
-    ['html', { open: 'never' }],
-    ['junit', { outputFile: 'results.xml' }],
-  ],
+  reporter: [['list'], ['html', { open: 'never' }], ['junit', { outputFile: 'results.xml' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: process.env.BASE_URL || 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
+    baseURL:
+      process.env.BASE_URL || 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
 
     //Browser Run Mode
     headless: false,
-    
+
     /*Capture a screenshot when test fails. See https://playwright.dev/docs/screenshots */
     screenshot: 'only-on-failure',
 
@@ -45,19 +42,19 @@ export default defineConfig({
     trace: 'retain-on-failure',
 
     /* Better debugging */
-    actionTimeout: 15_000, 
-  
+    actionTimeout: 15_000,
+
     //stable locators stratergy
     testIdAttribute: 'data-test-id',
   },
 
-    /* Test timeout */
-    timeout: 60000,
+  /* Test timeout */
+  timeout: 60000,
 
-    /*Expect assertion timeout*/
-    expect: {
-      timeout: 5000
-    },
+  /*Expect assertion timeout*/
+  expect: {
+    timeout: 5000,
+  },
 
   /* Configure projects for major browsers */
   projects: [
