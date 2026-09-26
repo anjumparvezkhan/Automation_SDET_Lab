@@ -7,6 +7,7 @@ test.describe('Dashboard Tests', () => {
     await dashboardPage.isAdminMenuClickable();
     await dashboardPage.isPimMenuClickable();
     await dashboardPage.isMyInfoMenuClickable();
+    
   });
 
   test('Navigate to My Info', async ({ dashboardPage }) => {

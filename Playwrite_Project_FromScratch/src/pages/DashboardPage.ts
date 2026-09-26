@@ -58,4 +58,8 @@ export class DashboardPage {
   async verifyMyInfoFormHeading() {
     await expect(this.formheading).toHaveText('Personal Details');
   }
+
+  async clickPimMenu(){
+    await this.pimMenu.click();
+  }
 }
