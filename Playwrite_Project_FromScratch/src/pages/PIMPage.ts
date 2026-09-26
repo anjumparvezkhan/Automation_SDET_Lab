@@ -7,6 +7,12 @@ export class PIMPage {
     readonly searchBtn : Locator;
     readonly noRecordFound : Locator;
     readonly resetbtn : Locator;
+    readonly personalDetailsHeading : Locator;
+    readonly firstName : Locator;
+    readonly middleName : Locator;
+    readonly lastName : Locator;
+    readonly rowcell : Locator;
+    readonly employeeId : Locator;
 
     constructor(page : Page){
         this.page = page;
@@ -15,6 +21,12 @@ export class PIMPage {
         this.searchBtn = page.getByRole('button', { name: 'Search' });
         this.noRecordFound = page.locator('.oxd-toast-content');
         this.resetbtn = page.getByRole('button', {name : 'Reset'});
+        this.personalDetailsHeading = page.getByRole('heading', {name: 'Personal Details'})
+        this.firstName  = page.getByPlaceholder('First Name')
+        this.middleName  = page.getByPlaceholder('Middle Name')
+        this.lastName  = page.getByPlaceholder('Last Name')
+        this.rowcell = page.getByRole('cell').nth(1);
+        this.employeeId = page.locator('input.oxd-input.oxd-input--active').nth(4)
     }
 
     async verifyEmpListHeader(){
@@ -46,5 +58,35 @@ export class PIMPage {
 
     async clickResetBtn(){
         await this.resetbtn.click();
+    }
+
+    async clickUsertoOpenDetails(): Promise<void> {
+        await this.rowcell.click();
+    }
+
+    async validateNavigationToDetailsPage(){
+        await expect(this.page.url()).toContain('/viewPersonalDetails/empNumber/');
+        await expect(this.personalDetailsHeading).toHaveText('Personal Details')
+    }
+
+    async verifyName(employeeName : string){
+        await expect(this.firstName).toBeVisible();
+        await expect(this.firstName).toBeEnabled();
+        await expect(this.firstName).not.toHaveValue('');
+        await expect(this.firstName).toHaveValue(employeeName);
+
+        await expect(this.middleName).toBeVisible();
+        await expect(this.middleName).toBeEnabled();
+        await expect(this.middleName).toHaveValue('');
+        
+        await expect(this.lastName).toBeVisible();
+        await expect(this.lastName).toBeEnabled();
+        await expect(this.lastName).not.toHaveValue('');
+    }
+
+        async verifyEmployeeId(){
+        await expect(this.employeeId).toBeVisible();
+        await expect(this.employeeId).toBeEnabled();
+        await expect(this.employeeId).not.toHaveValue('');
     }
 }

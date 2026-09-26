@@ -1,10 +1,6 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="17.266891">
-<testsuite name="smoke\PIM.spec.ts" timestamp="2026-09-26T19:11:20.790Z" hostname="chromium" tests="3" failures="0" skipped="0" time="38.223" errors="0">
-<testcase name="Search User From List › Search User" classname="smoke\PIM.spec.ts" time="11.675">
-</testcase>
-<testcase name="Search User From List › Invalid User Search" classname="smoke\PIM.spec.ts" time="14.872">
-</testcase>
-<testcase name="Search User From List › Reset Shearch Field" classname="smoke\PIM.spec.ts" time="11.676">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="13.515367999999784">
+<testsuite name="smoke\PIM.spec.ts" timestamp="2026-09-26T20:09:53.042Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.184" errors="0">
+<testcase name="Search User From List › Search and Validate Employee Details" classname="smoke\PIM.spec.ts" time="11.184">
 </testcase>
 </testsuite>
 </testsuites>
