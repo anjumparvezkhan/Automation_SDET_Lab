@@ -13,6 +13,9 @@ export class PIMPage {
     readonly lastName : Locator;
     readonly rowcell : Locator;
     readonly employeeId : Locator;
+    readonly savePersonalDetails : Locator;
+    readonly succesfullyUpdate : Locator;
+
 
     constructor(page : Page){
         this.page = page;
@@ -27,6 +30,8 @@ export class PIMPage {
         this.lastName  = page.getByPlaceholder('Last Name')
         this.rowcell = page.getByRole('cell').nth(1);
         this.employeeId = page.locator('input.oxd-input.oxd-input--active').nth(4)
+        this.savePersonalDetails = page.getByRole('button', { name: 'Save' }).first();
+        this.succesfullyUpdate = page.locator('.oxd-toast-content--success');;
     }
 
     async verifyEmpListHeader(){
@@ -88,5 +93,25 @@ export class PIMPage {
         await expect(this.employeeId).toBeVisible();
         await expect(this.employeeId).toBeEnabled();
         await expect(this.employeeId).not.toHaveValue('');
+    }
+
+    async updateFirstName(employeeName : string){
+        await this.firstName.click();
+        //await this.firstName.focus();
+        //await this.firstName.clear();
+        await this.firstName.fill(employeeName);
+    }
+
+    async clicksavePersonalDetails(){
+        await this.savePersonalDetails.click();
+    }
+
+    async verifyRecordSuccesfullyUpdate(){
+        await expect(this.succesfullyUpdate).toContainText('Successfully Updated');
+        await expect(this.succesfullyUpdate).toBeHidden({ timeout: 5000 });
+    }
+
+    async verifyUpdatedFirstName(employeeName : string){
+        await expect(this.firstName).toHaveValue(employeeName);
     }
 }

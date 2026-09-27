@@ -39,4 +39,17 @@ test.describe('Search User From List', () => {
         await pimPage.verifyName(employeeName);
         await pimPage.verifyEmployeeId();
     });
+
+        test('Update Employee First Name and validate Details', async({ dashboardPage, pimPage, page }) => {
+        await dashboardPage.clickPimMenu();
+        await pimPage.verifyEmpListHeader();
+        await pimPage.enterEmpName(employeeName);
+        await pimPage.clickSearch();
+        await pimPage.verifyEmployeeNameDisplayed(employeeName)
+        await pimPage.clickUsertoOpenDetails();
+        await pimPage.updateFirstName(employeeName+"_Updated"); 
+        await pimPage.clicksavePersonalDetails();
+        await pimPage.verifyRecordSuccesfullyUpdate();
+        await pimPage.verifyUpdatedFirstName(employeeName+"_Updated")
+    });
 });
